@@ -13,7 +13,7 @@ const marketData = [
 
 export default function MarketTicker() {
     return (
-        <div className="w-full bg-brand-bg/50 border-b border-brand-border py-1 overflow-hidden hidden sm:block h-[34px]">
+        <div className="w-full bg-brand-bg/50 border-b border-brand-border py-1 overflow-hidden h-[34px]">
             <motion.div
                 className="flex whitespace-nowrap gap-12 items-center"
                 animate={{ x: [0, -1000] }}
