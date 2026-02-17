@@ -10,7 +10,7 @@ export default function Terms() {
                     className="glass-card p-8 sm:p-12"
                 >
                     <h1 className="text-3xl sm:text-4xl font-playfair font-bold text-white mb-2">Terms of Service</h1>
-                    <p className="text-brand-gold text-xs uppercase tracking-widest mb-10 font-bold">Last Updated: February 17, 2025</p>
+                    <p className="text-brand-gold text-xs uppercase tracking-widest mb-10 font-bold">Last Updated: February 17, 2026</p>
 
                     <div className="prose prose-invert max-w-none text-brand-text-secondary space-y-8 leading-relaxed">
                         <section className="bg-brand-mint/5 border-l-4 border-brand-mint p-6 rounded-r-lg">

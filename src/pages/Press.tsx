@@ -38,7 +38,7 @@ export default function Press() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {[
-                                    { source: 'Financial Times 2025', title: 'Why US Gen Z is flocking to Roth IRAs over 401(k)s.', link: '#' },
+                                    { source: 'Financial Times 2026', title: 'Why US Gen Z is flocking to Roth IRAs over 401(k)s.', link: '#' },
                                     { source: 'Business Insider', title: 'The new rules of High-Yield Savings in a high-rate environment.', link: '#' },
                                 ].map((news) => (
                                     <div key={news.title} className="glass-card p-6 hover:border-brand-mint/40 transition-all group">

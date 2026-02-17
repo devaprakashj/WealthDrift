@@ -10,7 +10,7 @@ export default function Privacy() {
                     className="glass-card p-8 sm:p-12"
                 >
                     <h1 className="text-3xl sm:text-4xl font-playfair font-bold text-white mb-2">Privacy Policy</h1>
-                    <p className="text-brand-mint text-xs uppercase tracking-widest mb-10 font-bold">Last Updated: February 17, 2025</p>
+                    <p className="text-brand-mint text-xs uppercase tracking-widest mb-10 font-bold">Last Updated: February 17, 2026</p>
 
                     <div className="prose prose-invert max-w-none text-brand-text-secondary space-y-8 leading-relaxed">
                         <section>

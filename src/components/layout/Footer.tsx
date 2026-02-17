@@ -55,7 +55,7 @@ export default function Footer() {
                         <span>US Financial Authority</span>
                     </div>
                     <p className="text-xs text-brand-text-secondary max-w-2xl mx-auto leading-relaxed">
-                        © 2025 WealthDrift Research Panel. All financial guides are strictly for educational purposes.
+                        © 2026 WealthDrift Research Panel. All financial guides are strictly for educational purposes.
                         We are an independent publisher. We may receive compensation from some companies mentioned,
                         at no cost to you, which helps us keep our expert research free.
                     </p>
