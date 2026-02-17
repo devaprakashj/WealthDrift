@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import { motion } from "framer-motion";
 import { Search, Menu, X } from "lucide-react";
 import { useState } from "react";
+import MarketTicker from "./MarketTicker";
 
 const navLinks = [
     { name: "Blog", href: "/blog" },
@@ -17,6 +18,7 @@ export default function Navbar() {
 
     return (
         <nav className="sticky top-0 z-50 w-full glass-card border-none rounded-none border-b border-brand-border backdrop-blur-md">
+            <MarketTicker />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <Link to="/">
