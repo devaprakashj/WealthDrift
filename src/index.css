@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap");
+
+@theme {
+  --color-brand-bg: #0a0a0f;
+  --color-brand-card: #111118;
+  --color-brand-border: #1e1e2e;
+  --color-brand-mint: #00d4aa;
+  --color-brand-gold: #f0a500;
+  --color-brand-text: #ffffff;
+  --color-brand-text-secondary: #8b8b9e;
+
+  --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-text);
+    font-family: var(--font-inter);
+    @apply antialiased;
+  }
+}
+
+.glass-card {
+  background: rgba(17, 17, 24, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+}
+
+.gradient-text-mint {
+  background: linear-gradient(135deg, #00d4aa, #00a88a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-mint {
+  background: linear-gradient(135deg, #00d4aa, #00a88a);
+  color: #0a0a0f;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-mint:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 212, 170, 0.2);
+}
