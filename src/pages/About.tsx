@@ -35,6 +35,65 @@ export default function About() {
                     </div>
                 </section>
 
+                {/* Meet the Founder */}
+                <section className="mb-20 grid grid-cols-1 md:grid-cols-12 gap-12 items-center border-b border-brand-border pb-20">
+                    <div className="md:col-span-5 relative">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="relative z-10 aspect-square rounded-2xl overflow-hidden border border-brand-border"
+                        >
+                            <img
+                                src="/deva.jpg"
+                                alt="Devaprakash J - Founder of WealthDrift"
+                                className="w-full h-full object-cover"
+                                onError={(e) => {
+                                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600";
+                                }}
+                            />
+                        </motion.div>
+                        <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-mint/20 blur-3xl -z-10" />
+                    </div>
+
+                    <div className="md:col-span-7 space-y-6">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <span className="text-brand-mint text-xs font-bold uppercase tracking-widest mb-2 block">The Founder's Story</span>
+                            <h2 className="text-3xl md:text-5xl font-playfair font-bold text-white mb-6 leading-tight">Devaprakash J</h2>
+                            <p className="text-brand-text-secondary text-lg leading-relaxed mb-6">
+                                "Financial freedom isn't just about numbers on a spreadsheet; it's about reclaiming your time and living life on your own terms. I founded WealthDrift to empower everyday people with the same strategies used by the top 1%."
+                            </p>
+                            <div className="flex flex-wrap gap-6 items-center">
+                                <div className="flex gap-4">
+                                    <div className="glass-card px-4 py-2 border-brand-border bg-white/5">
+                                        <p className="text-brand-mint font-bold">100+</p>
+                                        <p className="text-[10px] text-brand-text-secondary uppercase">Articles Written</p>
+                                    </div>
+                                    <div className="glass-card px-4 py-2 border-brand-border bg-white/5">
+                                        <p className="text-brand-mint font-bold">50k</p>
+                                        <p className="text-[10px] text-brand-text-secondary uppercase">Monthly Impact</p>
+                                    </div>
+                                </div>
+                                <a
+                                    href="https://www.linkedin.com/in/devaprakashj/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-brand-mint hover:text-white transition-colors group"
+                                >
+                                    <div className="p-2 rounded-full bg-brand-mint/10 border border-brand-mint/20 group-hover:bg-brand-mint group-hover:text-brand-bg transition-all">
+                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                                    </div>
+                                    <span className="text-sm font-bold uppercase tracking-wider">Connect on LinkedIn</span>
+                                </a>
+                            </div>
+                        </motion.div>
+                    </div>
+                </section>
+
                 {/* Values */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
                     {[

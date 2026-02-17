@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Clock, Calendar, User } from "lucide-react";
+import { Clock, Calendar, User, Award } from "lucide-react";
 import { formatDate } from "../lib/utils";
 import { posts } from "../lib/posts";
 
@@ -165,20 +165,29 @@ export default function BlogPost() {
                             </div>
 
                             {/* Author Bio for E-E-A-T */}
-                            <div className="p-8 rounded-2xl bg-brand-card border border-brand-border mb-12 flex flex-col md:flex-row gap-6 items-center md:items-start text-center md:text-left grayscale hover:grayscale-0 transition-all">
-                                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-brand-mint to-brand-gold p-1 flex-shrink-0">
+                            <div className="p-8 rounded-2xl bg-brand-card border border-brand-border mb-12 flex flex-col md:flex-row gap-6 items-center md:items-start text-center md:text-left hover:border-brand-mint/30 transition-all duration-500 overflow-hidden relative group">
+                                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                                    <Award className="w-20 h-20 text-brand-mint" />
+                                </div>
+                                <div className="w-28 h-28 rounded-full bg-gradient-to-br from-brand-mint to-brand-gold p-1 flex-shrink-0 shadow-2xl relative z-10">
                                     <img
-                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
-                                        alt="Author"
+                                        src="/deva.jpg"
+                                        alt="Devaprakash J - Founder & Lead Researcher"
                                         className="w-full h-full object-cover rounded-full border-4 border-brand-card"
+                                        onError={(e) => {
+                                            (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200";
+                                        }}
                                     />
                                 </div>
-                                <div>
-                                    <h4 className="text-xl font-playfair font-bold text-white mb-2">Developed by WealthDrift Finance Panel</h4>
-                                    <p className="text-brand-text-secondary text-sm leading-relaxed mb-4">
-                                        Our editorial team consists of US-based certified financial researchers and data analysts dedicated to providing transparent, math-backed guidance. Each guide undergoes a rigorous review process to ensure absolute accuracy in the 2025 US market.
+                                <div className="relative z-10">
+                                    <h4 className="text-xl font-playfair font-bold text-white mb-2">Article by Devaprakash J</h4>
+                                    <p className="text-brand-text-secondary text-sm leading-relaxed mb-4 max-w-xl">
+                                        As the Founder and Lead Analyst at WealthDrift, Devaprakash J specializes in decoding the US financial landscape for modern investors. With a focus on math-backed strategies and transparency, his work helps thousands achieve financial independence.
                                     </p>
-                                    <p className="text-brand-mint text-[10px] font-bold uppercase tracking-[0.2em]">Verified Expert Analysis</p>
+                                    <div className="flex items-center gap-3">
+                                        <span className="text-brand-mint text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 bg-brand-mint/10 rounded-full border border-brand-mint/20">Executive Editor</span>
+                                        <span className="text-[10px] text-brand-text-secondary uppercase tracking-widest font-medium">Wealth Transformation Expert</span>
+                                    </div>
                                 </div>
                             </div>
 
