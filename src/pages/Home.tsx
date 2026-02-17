@@ -63,10 +63,31 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* AdSense Placement Placeholder */}
-            <section className="max-w-5xl mx-auto px-4 w-full">
-                <div className="w-full h-32 bg-brand-card/50 border border-dashed border-brand-border rounded-xl flex items-center justify-center text-brand-text-secondary text-xs uppercase tracking-widest">
-                    Advertisment Slot (AdSense Ready)
+            {/* Newsletter Section */}
+            <section className="max-w-7xl mx-auto px-4 w-full">
+                <div className="glass-card p-12 relative overflow-hidden text-center">
+                    <div className="absolute inset-0 bg-brand-mint/5 pointer-events-none" />
+                    <div className="relative z-10 max-w-2xl mx-auto">
+                        <TrendingUp className="w-12 h-12 text-brand-mint mb-6 mx-auto" />
+                        <h2 className="text-3xl md:text-5xl font-playfair font-bold text-white mb-6">Join the WealthDrift Newsletter</h2>
+                        <p className="text-brand-text-secondary text-lg mb-10">
+                            Get weekly deep-dives into US investing, tax strategies, and credit hacks.
+                            Join 5,000+ Americans building generational wealth.
+                        </p>
+                        <form className="flex flex-col sm:flex-row gap-4" onSubmit={(e) => e.preventDefault()}>
+                            <input
+                                type="email"
+                                placeholder="Enter your US email"
+                                className="flex-grow bg-brand-bg border border-brand-border rounded-xl p-4 text-white focus:border-brand-mint outline-none"
+                            />
+                            <button className="btn-mint px-12 py-4 whitespace-nowrap cursor-pointer">
+                                Get Free Access
+                            </button>
+                        </form>
+                        <p className="text-[10px] text-brand-text-secondary mt-6 uppercase tracking-widest">
+                            No spam. Unsubscribe anytime.
+                        </p>
+                    </div>
                 </div>
             </section>
         </div>
