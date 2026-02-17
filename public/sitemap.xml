@@ -1,32 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://wealthdrift.com/</loc>
+    <loc>https://wealthdrift.vercel.app/</loc>
     <lastmod>2025-02-17</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://wealthdrift.com/blog</loc>
+    <loc>https://wealthdrift.vercel.app/blog</loc>
     <lastmod>2025-02-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wealthdrift.com/tools</loc>
+    <loc>https://wealthdrift.vercel.app/categories</loc>
     <lastmod>2025-02-17</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://wealthdrift.com/about</loc>
+    <loc>https://wealthdrift.vercel.app/tools</loc>
+    <lastmod>2025-02-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wealthdrift.vercel.app/about</loc>
+    <lastmod>2025-02-17</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://wealthdrift.com/contact</loc>
+    <loc>https://wealthdrift.vercel.app/privacy</loc>
+    <lastmod>2025-02-17</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wealthdrift.vercel.app/terms</loc>
+    <lastmod>2025-02-17</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wealthdrift.vercel.app/contact</loc>
+    <lastmod>2025-02-17</lastmod>
     <priority>0.5</priority>
   </url>
-  <!-- Generated Post URLs -->
-  <url><loc>https://wealthdrift.com/blog/best-high-yield-savings-2025</loc></url>
-  <url><loc>https://wealthdrift.com/blog/roth-ira-beginner-guide-2025</loc></url>
-  <url><loc>https://wealthdrift.com/blog/best-no-fee-credit-cards-2025</loc></url>
-  <url><loc>https://wealthdrift.com/blog/50-30-20-budgeting-rule-2025</loc></url>
-  <url><loc>https://wealthdrift.com/blog/side-hustles-2000-month-2025</loc></url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://wealthdrift.vercel.app/blog/ultimate-guide-wealth-building-usa-2025</loc>
+    <lastmod>2025-02-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wealthdrift.vercel.app/blog/best-high-yield-savings-2025</loc>
+    <lastmod>2025-02-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wealthdrift.vercel.app/blog/roth-ira-beginner-guide-2025</loc>
+    <lastmod>2025-02-12</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wealthdrift.vercel.app/blog/maximize-credit-card-rewards-2025</loc>
+    <lastmod>2025-02-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wealthdrift.vercel.app/blog/50-30-20-budgeting-step-by-step-2025</loc>
+    <lastmod>2025-02-08</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wealthdrift.vercel.app/blog/side-hustle-empire-2025</loc>
+    <lastmod>2025-02-05</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wealthdrift.vercel.app/blog/real-estate-investing-for-millennials-2025</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.9</priority>
+  </url>
 </urlset>
