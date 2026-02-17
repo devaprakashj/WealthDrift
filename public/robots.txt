@@ -1,4 +1,19 @@
+# WealthDrift Robots.txt - Optimized for US Content
 User-agent: *
 Allow: /
 
-Sitemap: https://wealthdrift.com/sitemap.xml
+# Specifically allow major US search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Block scraper bots that don't add value
+User-agent: GPTBot
+Disallow: /
+
+Sitemap: https://wealthdrift.vercel.app/sitemap.xml

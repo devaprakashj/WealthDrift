@@ -21,6 +21,39 @@ export default function BlogPost() {
 
     return (
         <div className="min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+            {/* Dynamic SEO Tags for individual posts */}
+            <head>
+                <title>{`${post.title} | WealthDrift`}</title>
+                <meta name="description" content={post.excerpt} />
+                <meta property="og:title" content={post.title} />
+                <meta property="og:description" content={post.excerpt} />
+                <meta property="og:image" content={post.image} />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": post.title,
+                        "image": [post.image],
+                        "datePublished": post.date,
+                        "dateModified": post.date,
+                        "author": [{
+                            "@type": "Organization",
+                            "name": "WealthDrift Editorial",
+                            "url": "https://wealthdrift.vercel.app/about"
+                        }],
+                        "description": post.excerpt,
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "WealthDrift",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://wealthdrift.vercel.app/favicon.svg"
+                            }
+                        }
+                    })}
+                </script>
+            </head>
+
             <div className="max-w-7xl mx-auto">
                 <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-brand-text-secondary hover:text-brand-mint transition-colors mb-10">
                     <ArrowLeft className="w-4 h-4" /> Back to Blog
