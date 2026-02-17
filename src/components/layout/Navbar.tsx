@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import Logo from "./Logo";
 import { motion } from "framer-motion";
 import { Search, Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -18,10 +19,8 @@ export default function Navbar() {
         <nav className="sticky top-0 z-50 w-full glass-card border-none rounded-none border-b border-brand-border backdrop-blur-md">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                    <Link to="/" className="flex items-center gap-2">
-                        <span className="text-2xl font-playfair font-bold">
-                            <span className="text-brand-mint">W</span>ealthDrift
-                        </span>
+                    <Link to="/">
+                        <Logo className="w-9 h-9" />
                     </Link>
 
                     {/* Desktop Nav */}
