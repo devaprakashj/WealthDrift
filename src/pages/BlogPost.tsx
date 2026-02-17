@@ -119,9 +119,57 @@ export default function BlogPost() {
                             </div>
 
                             <div className="flex items-center gap-4 py-8 border-y border-brand-border mb-12">
-                                <p className="text-white text-sm font-bold">Share this guide:</p>
-                                <div className="flex gap-2">
-                                    <button className="p-2 rounded-lg bg-brand-card border border-brand-border hover:text-brand-mint transition-all cursor-pointer"><Share2 className="w-4 h-4" /></button>
+                                <p className="text-white text-sm font-bold">Share this USA wealth guide:</p>
+                                <div className="flex gap-4">
+                                    {/* X (Twitter) */}
+                                    <a
+                                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(window.location.href)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="p-3 rounded-lg bg-brand-card border border-brand-border hover:text-brand-mint hover:border-brand-mint/50 transition-all flex items-center gap-2 text-xs font-bold uppercase tracking-wider"
+                                    >
+                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                                        Post on X
+                                    </a>
+
+                                    {/* Reddit */}
+                                    <a
+                                        href={`https://www.reddit.com/submit?url=${encodeURIComponent(window.location.href)}&title=${encodeURIComponent(post.title)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="p-3 rounded-lg bg-brand-card border border-brand-border hover:text-[#ff4500] hover:border-[#ff4500]/50 transition-all flex items-center gap-2 text-xs font-bold uppercase tracking-wider"
+                                    >
+                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.056 1.597.04.21.06.423.06.637 0 2.506-3.497 4.545-7.81 4.545s-7.81-2.039-7.81-4.545c0-.218.02-.433.064-.647-.615-.265-1.05-.881-1.05-1.597 0-.968.786-1.754 1.754-1.754.463 0 .875.18 1.179.472 1.187-.813 2.783-1.366 4.553-1.482l.905-4.244 3.282.696c.03.835.668 1.513 1.452 1.513zm-9.29 10c-.766 0-1.387.621-1.387 1.387s.621 1.387 1.387 1.387 1.387-.621 1.387-1.387-.621-1.387-1.387-1.387zm6.556 0c-.766 0-1.387.621-1.387 1.387s.621 1.387 1.387 1.387 1.387-.621 1.387-1.387-.621-1.387-1.387-1.387zm-1.879 2.597c-.896 0-1.674.525-2.083 1.293-.053.101-.019.225.077.283a.208.208 0 0 0 .285-.065c.34-.639.99-.982 1.721-.982.724 0 1.38.343 1.724.982a.208.208 0 0 0 .284.065c.097-.058.131-.182.078-.283-.41-.768-1.192-1.293-2.086-1.293z" /></svg>
+                                        Share on Reddit
+                                    </a>
+
+                                    {/* Pinterest */}
+                                    <a
+                                        href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(window.location.href)}&media=${encodeURIComponent(post.image)}&description=${encodeURIComponent(post.title)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="p-3 rounded-lg bg-brand-card border border-brand-border hover:text-[#e60023] hover:border-[#e60023]/50 transition-all flex items-center gap-2 text-xs font-bold uppercase tracking-wider"
+                                    >
+                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.965 1.406-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.333.333 0 0 1 .076.31c-.098.404-.318 1.291-.36 1.469-.055.23-.186.278-.429.166-1.597-.743-2.594-3.076-2.594-4.948 0-4.029 2.928-7.729 8.442-7.729 4.432 0 7.877 3.158 7.877 7.379 0 4.405-2.777 7.948-6.631 7.948-1.295 0-2.512-.672-2.928-1.466 0 0-.641 2.434-.796 3.041-.288 1.103-1.066 2.488-1.589 3.328 1.125.348 2.318.535 3.555.535 6.621 0 11.988-5.367 11.988-11.987C24.005 5.367 18.638 0 12.017 0z" /></svg>
+                                        Pin It
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* Recommended Reading */}
+                            <div className="mt-20">
+                                <h3 className="text-2xl font-playfair font-bold text-white mb-8 border-l-4 border-brand-mint pl-4">Master More US Finance</h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    {posts.filter(p => p.slug !== slug).slice(0, 2).map((recommended) => (
+                                        <Link key={recommended.slug} to={`/blog/${recommended.slug}`} className="group block">
+                                            <div className="relative h-40 rounded-xl overflow-hidden mb-4 border border-brand-border">
+                                                <img src={recommended.image} alt={recommended.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                                <div className="absolute inset-0 bg-brand-bg/40 group-hover:bg-transparent transition-colors" />
+                                            </div>
+                                            <h4 className="text-white font-bold group-hover:text-brand-mint transition-colors leading-tight mb-2">{recommended.title}</h4>
+                                            <p className="text-brand-text-secondary text-xs uppercase tracking-widest">{recommended.readTime}</p>
+                                        </Link>
+                                    ))}
                                 </div>
                             </div>
                         </motion.div>
