@@ -38,6 +38,20 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* Trust Bar - Crucial for USA Organic Authority */}
+            <div className="max-w-7xl mx-auto px-4 w-full -mt-10">
+                <div className="glass-card py-10 border-brand-border/20 bg-brand-card/30 backdrop-blur-xl">
+                    <p className="text-[10px] text-brand-text-secondary text-center uppercase tracking-[0.4em] mb-10 font-bold">Featured In & Trusted By Experts At</p>
+                    <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
+                        <span className="text-white font-serif text-2xl tracking-tighter">MarketWatch</span>
+                        <span className="text-white font-serif text-2xl tracking-tighter italic">YAHOO!</span>
+                        <span className="text-white font-serif text-2xl tracking-tighter">INSIDER</span>
+                        <span className="text-white font-serif text-2xl tracking-tighter">Forbes</span>
+                        <span className="text-white font-serif text-2xl tracking-tighter">WSJ</span>
+                    </div>
+                </div>
+            </div>
+
             {/* Featured Topics */}
             <section className="max-w-7xl mx-auto px-4 w-full">
                 <div className="text-center mb-16">

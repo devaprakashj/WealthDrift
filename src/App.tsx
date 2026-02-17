@@ -10,6 +10,7 @@ import About from './pages/About'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import Contact from './pages/Contact'
+import Press from './pages/Press'
 import CookieConsent from './components/layout/CookieConsent'
 import ScrollToTop from './components/util/ScrollToTop'
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/press" element={<Press />} />
         </Routes>
       </main>
       <Footer />
