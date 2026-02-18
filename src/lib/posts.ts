@@ -39,7 +39,7 @@ High-interest debt (Credit cards, payday loans) is a financial emergency. We pro
 You cannot build a skyscraper on a swamp. You need a defensive strategy.
 
 #### 2.1 The Optimized Emergency Fund
-In 2025, inflation is high. Keeping $20,000 in a 0.01% savings account is a mistake. We analyze the best High-Yield Savings Accounts (HYSA) and Money Market Funds (MMFs) that pay 5%+.
+In 2026, inflation is high. Keeping $20,000 in a 0.01% savings account is a mistake. We analyze the [best High-Yield Savings Accounts (HYSA)](/blog/best-hysa-rates) and Money Market Funds (MMFs) that pay 5%+.
 
 #### 2.2 Insurance for the Wealth-Builder
 Life insurance, disability insurance, and umbrella policies. We explain why 'Buy Term and Invest the Rest' is the only insurance strategy that makes sense for the 99%.
@@ -50,7 +50,7 @@ This is where the magic happens. We dive deep into the US Equity markets.
 
 #### 3.1 Understanding the Tax-Advantaged Ladder
 1. 401(k) to the Match
-2. Max out Roth IRA
+2. [Max out Roth IRA](/blog/roth-ira-investing-guide)
 3. Max out HSA (The Triple Tax-Advantage)
 4. Back to 401(k) max
 5. Taxable Brokerage
@@ -63,14 +63,14 @@ We break down the 3-Fund Portfolio:
 
 ### Phase 4: Advanced Wealth Strategies
 
-#### 4.1 Real Estate Investing (REI)
+#### 4.1 [Real Estate Investing (REI)](/blog/real-estate-investing-millennials)
 The pros and cons of long-term rentals, short-term rentals (Airbnb), and REITs. How to use leverage safely.
 
 #### 4.2 Tax Loss Harvesting and Rebalancing
 How to legally avoid paying taxes on your gains and keeping your portfolio risk in check.
 
 ### Conclusion: The Long Game
-Wealth is the result of thousands of small decisions made correctly over decades. Persistence is the only true secret.`
+Wealth is the result of thousands of small decisions made correctly over decades. [Persistence is the only true secret.](/blog/wealth-building-guide-america)`
     },
     {
         slug: "best-hysa-rates",
@@ -80,7 +80,7 @@ Wealth is the result of thousands of small decisions made correctly over decades
         readTime: "15 min read",
         image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200",
         keywords: ["HYSA", "savings account", "high yield savings 2025", "FDIC insured", "best interest rates"],
-        excerpt: "Stop losing money to inflation. These FDIC-insured savings accounts are paying over 5% APY right now — here are our top picks for 2025.",
+        excerpt: "Stop losing money to inflation. These FDIC-insured savings accounts are paying over 5% APY right now — here are our [top picks](/blog/best-hysa-rates) for 2026.",
         content: `## The Modern Savings Revolution
 
 Gone are the days when you had to visit a physical bank to open an account. In 2025, digital-first banking has forced interest rates to stay competitive.
@@ -113,7 +113,7 @@ FDIC vs NCUA. We explain why your money is safer in a US-registered HYSA than an
         readTime: "20 min read",
         image: "https://images.unsplash.com/photo-1611974714015-8868615ea411?auto=format&fit=crop&q=80&w=1200",
         keywords: ["Roth IRA", "retirement planning", "tax-free investing", "Vanguard", "S&P 500"],
-        excerpt: "The Roth IRA is perhaps the greatest wealth-building tool available to Americans. Learn how to invest tax-free for the rest of your life.",
+        excerpt: "The Roth IRA is perhaps the greatest [wealth-building tool](/blog/wealth-building-guide-america) available to Americans. Learn how to invest tax-free for the rest of your life.",
         content: `## The Power of Tax-Free Growth
 
 A Roth IRA is the holy grail of investing. Unlike a 401(k), you pay taxes UP FRONT, but you never pay them again on that money.
@@ -233,7 +233,7 @@ Hear from 3 US-based entrepreneurs who built six-figure businesses while working
         readTime: "35 min read",
         image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1200",
         keywords: ["real estate", "house hacking", "REITs", "rental property", "property management", "passive income"],
-        excerpt: "You don't need a massive down payment to start in real estate. From 'House Hacking' to pure passive REITs, here is your path.",
+        excerpt: "You don't need a massive down payment to start in real estate. From [House Hacking](/blog/house-hacking-guide-usa) to pure passive REITs, here is your path.",
         content: `## Real Estate: The Great Wealth Accelerator
 
 Historically, real estate has created more millionaires in the US than any other industry. But the rules have changed in 2025.

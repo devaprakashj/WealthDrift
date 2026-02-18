@@ -6,6 +6,8 @@ import { formatDate } from "../lib/utils";
 import { posts } from "../lib/posts";
 import SafeImage from "../components/util/SafeImage";
 import ReadingProgress from "../components/util/ReadingProgress";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export default function BlogPost() {
     const { slug } = useParams();
@@ -156,9 +158,27 @@ export default function BlogPost() {
                             </div>
 
                             <div className="prose prose-invert prose-luxury text-brand-text-secondary space-y-8 leading-relaxed mb-12 text-base md:text-lg max-w-none">
-                                <div className="whitespace-pre-wrap font-inter break-words overflow-x-hidden article-content">
+                                <ReactMarkdown
+                                    remarkPlugins={[remarkGfm]}
+                                    components={{
+                                        a: ({ node, ...props }) => {
+                                            const isInternal = props.href?.startsWith("/");
+                                            if (isInternal) {
+                                                return <Link to={props.href || "#"} className="text-brand-mint hover:underline font-bold" {...(props as any)} />;
+                                            }
+                                            return <a target="_blank" rel="noopener noreferrer" className="text-brand-mint hover:underline font-bold" {...props} />;
+                                        },
+                                        h2: ({ node, ...props }) => <h2 className="text-2xl md:text-3xl font-playfair font-bold text-white mt-12 mb-6 border-l-4 border-brand-mint pl-4" {...props} />,
+                                        h3: ({ node, ...props }) => <h3 className="text-xl md:text-2xl font-playfair font-bold text-white mt-10 mb-4" {...props} />,
+                                        h4: ({ node, ...props }) => <h4 className="text-lg md:text-xl font-bold text-white mt-8 mb-3" {...props} />,
+                                        p: ({ node, ...props }) => <p className="mb-6 last:mb-0" {...props} />,
+                                        ul: ({ node, ...props }) => <ul className="list-disc pl-6 mb-8 space-y-2" {...props} />,
+                                        ol: ({ node, ...props }) => <ol className="list-decimal pl-6 mb-8 space-y-2" {...props} />,
+                                        li: ({ node, ...props }) => <li className="pl-2" {...props} />,
+                                    }}
+                                >
                                     {post.content}
-                                </div>
+                                </ReactMarkdown>
                             </div>
 
                             {/* Keywords / Tags */}
