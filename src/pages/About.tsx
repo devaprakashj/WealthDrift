@@ -13,10 +13,10 @@ export default function About() {
                         viewport={{ once: true }}
                         className="text-center mb-16"
                     >
-                        <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white mb-6">Our Mission</h1>
+                        <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white mb-6">America's Financial Blueprint</h1>
                         <p className="text-brand-text-secondary text-xl max-w-3xl mx-auto leading-relaxed">
-                            WealthDrift was founded for one reason: to cut through the noise of the financial industry
-                            and provide everyday Americans with honest, expert, and actionable advice.
+                            WealthDrift is the definitive guide for US personal finance. We cut through the industry noise
+                            to provide everyday Americans with honest, expert-backed, and actionable wealth-building advice.
                         </p>
                     </motion.div>
 

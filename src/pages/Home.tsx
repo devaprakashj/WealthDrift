@@ -20,8 +20,8 @@ export default function Home() {
                             US #1 Financial Guide
                         </span>
                         <h1 className="text-3xl sm:text-4xl md:text-7xl font-playfair font-bold text-white leading-tight mb-6 px-2">
-                            Take Control of Your <br className="hidden sm:block" />
-                            <span className="gradient-text-mint">Financial Future</span>
+                            Maximize Wealth in the <br className="hidden sm:block" />
+                            <span className="gradient-text-mint">United States Economy</span>
                         </h1>
                         <p className="text-brand-text-secondary text-base md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed px-4">
                             Expert-backed strategies to save more, invest smarter, and build
@@ -56,8 +56,8 @@ export default function Home() {
             {/* Featured Topics */}
             <section className="max-w-7xl mx-auto px-4 w-full">
                 <div className="text-center mb-10 md:mb-16">
-                    <h2 className="text-2xl md:text-4xl font-playfair font-bold text-white mb-4">Master Your Money</h2>
-                    <p className="text-brand-text-secondary text-sm md:text-base">Explore our curated categories to start your journey.</p>
+                    <h2 className="text-2xl md:text-4xl font-playfair font-bold text-white mb-4">Master Your Money: US Financial Insights</h2>
+                    <p className="text-brand-text-secondary text-sm md:text-base">Strategic guides curated for the modern American investor.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">

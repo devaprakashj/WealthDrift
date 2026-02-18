@@ -87,8 +87,8 @@ export default function Tools() {
         <div className="min-h-screen py-20 px-4">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-4">Financial Calculators</h1>
-                    <p className="text-brand-text-secondary text-lg max-w-2xl mx-auto">Free, easy-to-use tools to help you plan your path to wealth.</p>
+                    <h1 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-4">US Financial Calculators</h1>
+                    <p className="text-brand-text-secondary text-lg max-w-2xl mx-auto">Free, high-precision tools designed to help Americans plan their path to financial independence (FIRE).</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
