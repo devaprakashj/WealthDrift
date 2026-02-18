@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Clock, Calendar, User, Award } from "lucide-react";
 import { formatDate } from "../lib/utils";
 import { posts } from "../lib/posts";
+import SafeImage from "../components/util/SafeImage";
+import ReadingProgress from "../components/util/ReadingProgress";
 
 export default function BlogPost() {
     const { slug } = useParams();
@@ -22,6 +24,7 @@ export default function BlogPost() {
 
     return (
         <div className="min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+            <ReadingProgress />
             {/* Dynamic SEO Tags for individual posts */}
             <head>
                 <title>{`${post.title} | WealthDrift`}</title>
@@ -109,12 +112,12 @@ export default function BlogPost() {
 
                             {/* Featured Hero Image */}
                             <div className="relative h-[250px] sm:h-[400px] w-full rounded-2xl overflow-hidden mb-12 border border-brand-border">
-                                <img
+                                <SafeImage
                                     src={post.image}
                                     alt={post.title}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/60 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/60 to-transparent pointer-events-none" />
                             </div>
 
                             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-brand-border">
@@ -239,11 +242,11 @@ export default function BlogPost() {
                             <div className="mt-12 md:mt-20">
                                 <h3 className="text-xl md:text-2xl font-playfair font-bold text-white mb-8 border-l-4 border-brand-mint pl-4">Master More US Finance</h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    {posts.filter(p => p.slug !== slug).slice(0, 2).map((recommended) => (
+                                    {posts.filter(p => p.slug !== slug && p.category === post.category).slice(0, 2).map((recommended) => (
                                         <Link key={recommended.slug} to={`/blog/${recommended.slug}`} className="group block">
                                             <div className="relative h-40 rounded-xl overflow-hidden mb-4 border border-brand-border">
-                                                <img src={recommended.image} alt={recommended.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                                                <div className="absolute inset-0 bg-brand-bg/40 group-hover:bg-transparent transition-colors" />
+                                                <SafeImage src={recommended.image} alt={recommended.title} className="w-full h-full" />
+                                                <div className="absolute inset-0 bg-brand-bg/40 group-hover:bg-transparent transition-colors pointer-events-none" />
                                             </div>
                                             <h4 className="text-white font-bold group-hover:text-brand-mint transition-colors leading-tight mb-2 text-sm md:text-base">{recommended.title}</h4>
                                             <p className="text-brand-text-secondary text-[10px] uppercase tracking-widest">{recommended.readTime}</p>

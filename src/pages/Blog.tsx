@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Clock, Tag } from "lucide-react";
 import { formatDate } from "../lib/utils";
 import { posts } from "../lib/posts";
+import SafeImage from "../components/util/SafeImage";
 
 export default function Blog() {
     return (
@@ -29,13 +30,12 @@ export default function Blog() {
                                 <div className="glass-card overflow-hidden h-full hover:border-brand-mint/30 hover:scale-[1.02] transition-all duration-300 flex flex-col">
                                     {/* Featured Image */}
                                     <div className="relative h-48 w-full overflow-hidden border-b border-brand-border">
-                                        <img
+                                        <SafeImage
                                             src={post.image}
                                             alt={post.title}
-                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                            loading="lazy"
+                                            className="w-full h-full group-hover:scale-105 transition-transform duration-500"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/80 to-transparent opacity-60" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/80 to-transparent opacity-60 pointer-events-none" />
                                     </div>
 
                                     {/* Category Pill */}

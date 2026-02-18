@@ -2,8 +2,9 @@ import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
 import { Search, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MarketTicker from "./MarketTicker";
+import SearchOverlay from "./SearchOverlay";
 
 const navLinks = [
     { name: "Blog", href: "/blog" },
@@ -14,11 +15,22 @@ const navLinks = [
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
     const location = useLocation();
+
+    // Close search on Escape key
+    useEffect(() => {
+        const handleEsc = (e: KeyboardEvent) => {
+            if (e.key === "Escape") setIsSearchOpen(false);
+        };
+        window.addEventListener("keydown", handleEsc);
+        return () => window.removeEventListener("keydown", handleEsc);
+    }, []);
 
     return (
         <nav className="sticky top-0 z-50 w-full glass-card border-none rounded-none border-b border-brand-border backdrop-blur-md">
             <MarketTicker />
+            <SearchOverlay isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <Link to="/">
@@ -37,13 +49,22 @@ export default function Navbar() {
                                 {link.name}
                             </Link>
                         ))}
-                        <button className="text-brand-text-secondary hover:text-brand-mint transition-colors cursor-pointer">
+                        <button
+                            onClick={() => setIsSearchOpen(true)}
+                            className="text-brand-text-secondary hover:text-brand-mint transition-colors cursor-pointer"
+                        >
                             <Search className="w-5 h-5" />
                         </button>
                     </div>
 
-                    {/* Mobile Toggle */}
-                    <div className="md:hidden flex items-center">
+                    {/* Mobile Toggle & Search */}
+                    <div className="md:hidden flex items-center gap-4">
+                        <button
+                            onClick={() => setIsSearchOpen(true)}
+                            className="text-white"
+                        >
+                            <Search className="w-5 h-5" />
+                        </button>
                         <button onClick={() => setIsOpen(!isOpen)} className="text-white">
                             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                         </button>
