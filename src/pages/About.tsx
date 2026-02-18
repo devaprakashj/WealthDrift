@@ -94,13 +94,17 @@ export default function About() {
                     </div>
                 </section>
 
-                {/* Values */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+                {/* Values with enhanced professional tone */}
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-playfair font-bold text-white mb-4">Our Editorial Standards</h2>
+                    <p className="text-brand-text-secondary max-w-2xl mx-auto">We follow a rigorous process to ensure every guide we publish meets the highest standards of financial accuracy and transparency.</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 text-left">
                     {[
-                        { title: "Expert Reviewed", icon: ShieldCheck, desc: "Our content is checked by CFPs and finance experts for accuracy." },
-                        { title: "Independence", icon: Award, desc: "Technical accuracy and editorial independence are our top priorities." },
-                        { title: "Community First", icon: Users, desc: "We answer reader questions and build tools based on your needs." },
-                        { title: "Data Driven", icon: Target, desc: "Everything is backed by real numbers and historical data analysis." },
+                        { title: "Expertise-Driven", icon: ShieldCheck, desc: "Our research team includes analysts with deep experience in US equity markets and tax planning." },
+                        { title: "Strict Independence", icon: Award, desc: "Our reviews are never influenced by affiliate partnerships. We prioritize user value above all." },
+                        { title: "Verified Data", icon: Users, desc: "We pull data directly from official US sources like the IRS, Bureau of Labor Statistics, and FDIC." },
+                        { title: "Continuous Updates", icon: Target, desc: "The US economy moves fast. We audit our most critical guides monthly to reflect new tax codes and rates." },
                     ].map((val) => (
                         <div key={val.title} className="glass-card p-10 flex items-start gap-6">
                             <div className="p-3 rounded-xl bg-brand-mint/10 border border-brand-mint/20 text-brand-mint shrink-0">

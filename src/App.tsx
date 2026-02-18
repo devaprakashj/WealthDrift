@@ -11,6 +11,7 @@ import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import Contact from './pages/Contact'
 import Press from './pages/Press'
+import Disclaimer from './pages/Disclaimer'
 import CookieConsent from './components/layout/CookieConsent'
 import ScrollToTop from './components/util/ScrollToTop'
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/press" element={<Press />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
         </Routes>
       </main>
       <Footer />

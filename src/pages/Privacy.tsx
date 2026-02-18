@@ -45,9 +45,12 @@ export default function Privacy() {
                         <section>
                             <h2 className="text-xl font-bold text-white mb-4">5. Advertising Partners Privacy Policies</h2>
                             <p>
-                                Third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on WealthDrift, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.
+                                WealthDrift may feature advertising from third-party networks, including but not limited to **Google AdSense**. These partners use technology like cookies and web beacons to serve ads based on your visit to our Site and other sites on the Internet.
                             </p>
-                            <p className="mt-4 italic">Note: WealthDrift has no access to or control over these cookies that are used by third-party advertisers.</p>
+                            <p className="mt-4">
+                                Most third-party ad servers or ad networks use technologies that are used in their respective advertisements and links that appear on WealthDrift, which are sent directly to users' browsers. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see.
+                            </p>
+                            <p className="mt-4 italic">Note: WealthDrift has no access to or control over these cookies used by third-party advertisers.</p>
                         </section>
 
                         <section>

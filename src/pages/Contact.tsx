@@ -34,9 +34,10 @@ export default function Contact() {
                                 <div className="p-4 rounded-xl bg-brand-mint/10 border border-brand-mint/20 text-brand-mint">
                                     <Mail className="w-6 h-6" />
                                 </div>
-                                <div>
-                                    <h3 className="text-white font-bold">Email Us</h3>
-                                    <p className="text-brand-text-secondary text-sm">support@wealthdrift.com</p>
+                                <div className="flex-1">
+                                    <h3 className="text-white font-bold">Inquiries</h3>
+                                    <p className="text-brand-text-secondary text-sm mb-1">editorial@wealthdrift.com</p>
+                                    <p className="text-[10px] text-brand-mint uppercase tracking-widest font-bold">Response within 24 hours</p>
                                 </div>
                             </div>
                         </div>

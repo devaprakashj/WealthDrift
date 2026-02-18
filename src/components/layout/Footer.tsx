@@ -34,6 +34,7 @@ export default function Footer() {
                             <li><Link to="/about#affiliate" className="hover:text-brand-mint">Affiliate Disclosure</Link></li>
                             <li><Link to="/privacy" className="hover:text-brand-mint">Privacy Policy</Link></li>
                             <li><Link to="/terms" className="hover:text-brand-mint">Terms of Service</Link></li>
+                            <li><Link to="/disclaimer" className="hover:text-brand-mint">Disclaimer</Link></li>
                         </ul>
                     </div>
 
