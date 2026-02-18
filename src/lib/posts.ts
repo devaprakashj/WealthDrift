@@ -12,7 +12,7 @@ export interface Post {
 
 export const posts: Post[] = [
     {
-        slug: "ultimate-guide-wealth-building-usa-2025",
+        slug: "wealth-building-guide-america",
         title: "The Ultimate Guide to Wealth Building in America: From $0 to $1 Million",
         date: "2025-02-17",
         category: "Investing",
@@ -73,7 +73,7 @@ How to legally avoid paying taxes on your gains and keeping your portfolio risk 
 Wealth is the result of thousands of small decisions made correctly over decades. Persistence is the only true secret.`
     },
     {
-        slug: "best-high-yield-savings-2025",
+        slug: "best-hysa-rates",
         title: "7 High-Yield Savings Accounts Paying Over 5% APY in 2025",
         date: "2025-02-15",
         category: "Saving",
@@ -106,7 +106,7 @@ Be careful! Some banks offer 6% but only on the first $1,000. We teach you how t
 FDIC vs NCUA. We explain why your money is safer in a US-registered HYSA than anywhere else in the world during times of market volatility.`
     },
     {
-        slug: "roth-ira-beginner-guide-2025",
+        slug: "roth-ira-investing-guide",
         title: "How to Start a Roth IRA: The Ultimate Guide for US Investors",
         date: "2025-02-12",
         category: "Investing",
@@ -138,7 +138,7 @@ A Roth IRA is just a folder. You need to put something in it. For 99% of people,
 - Exceptions: First home purchase, education, medical emergencies.`
     },
     {
-        slug: "maximize-credit-card-rewards-2025",
+        slug: "credit-card-rewards-strategy",
         title: "Credit Card Masterclass: How to Travel the World for Free in 2025",
         date: "2025-02-10",
         category: "Credit Cards",
@@ -168,7 +168,7 @@ Wait! Before you apply, you must know Chase's strict rules. We provide a strateg
 You don't need a huge company to get a business credit card. Selling on eBay or freelancing counts. We show you how to unlock massive business sign-up bonuses.`
     },
     {
-        slug: "50-30-20-budgeting-step-by-step-2025",
+        slug: "50-30-20-budgeting-rule",
         title: "Beyond 50/30/20: Advanced Budgeting Systems for High Earners",
         date: "2025-02-08",
         category: "Budgeting",
@@ -196,7 +196,7 @@ An annual $600 car registration isn't an emergency—it's a predictable expense.
 Budgeting isn't about saying 'No' to yourself. It's about organizing your money so you can say 'Yes' to the things that actually bring you joy.`
     },
     {
-        slug: "side-hustle-empire-2025",
+        slug: "how-to-scale-side-hustle",
         title: "From Hustle to Empire: How to Scale a $10k/Month US Business",
         date: "2025-02-05",
         category: "Side Hustles",
@@ -226,7 +226,7 @@ Once you hit $2,000/month, you hit a wall. To get to $10,000, you must stop doin
 Hear from 3 US-based entrepreneurs who built six-figure businesses while working full-time jobs. Their schedules, their failures, and their wins.`
     },
     {
-        slug: "real-estate-investing-for-millennials-2025",
+        slug: "real-estate-investing-millennials",
         title: "Millionaire Real Estate Guide: House Hacking and Passive REITs",
         date: "2025-02-01",
         category: "Real Estate",
@@ -254,7 +254,7 @@ Learn how to pool your money with professional developers to own institutional-g
 We analyze the 'Sun Belt' vs the 'Rust Belt'. Which US cities have the highest rent-to-price ratios right now?`
     },
     {
-        slug: "house-hacking-masterclass-usa-2025",
+        slug: "house-hacking-guide-usa",
         title: "The 2025 House Hacking Masterclass: Live for Free and Build a US Real Estate Empire",
         date: "2025-02-18",
         category: "Real Estate",
