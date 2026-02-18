@@ -116,7 +116,7 @@ export default function BlogPost() {
                             <div className="relative h-[250px] sm:h-[400px] w-full rounded-2xl overflow-hidden mb-12 border border-brand-border">
                                 <SafeImage
                                     src={post.image}
-                                    alt={post.title}
+                                    alt={post.imageAlt}
                                     className="w-full h-full"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/60 to-transparent pointer-events-none" />

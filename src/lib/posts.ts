@@ -7,6 +7,7 @@ export interface Post {
     readTime: string;
     content: string;
     image: string;
+    imageAlt: string;
     keywords: string[];
 }
 
@@ -18,6 +19,7 @@ export const posts: Post[] = [
         category: "Investing",
         readTime: "45 min read",
         image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "A professional 3D render of a growing money tree with US dollar bills, symbolizing wealth accumulation in the American economy.",
         keywords: ["wealth building", "millionaire map", "US investing strategy", "financial independence", "FIRE movement", "compound interest", "asset allocation"],
         excerpt: "This 10,000-word deep dive is the only blueprint you need to go from zero to a million-dollar net worth in the United States economy.",
         content: `## Introduction: The Philosophy of Wealth
@@ -79,6 +81,7 @@ Wealth is the result of thousands of small decisions made correctly over decades
         category: "Saving",
         readTime: "15 min read",
         image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "A digital dashboard showing high-yield savings account interest rates and the logos of top US online banks.",
         keywords: ["HYSA", "savings account", "high yield savings 2025", "FDIC insured", "best interest rates"],
         excerpt: "Stop losing money to inflation. These FDIC-insured savings accounts are paying over 5% APY right now — here are our [top picks](/blog/best-hysa-rates) for 2026.",
         content: `## The Modern Savings Revolution
@@ -112,6 +115,7 @@ FDIC vs NCUA. We explain why your money is safer in a US-registered HYSA than an
         category: "Investing",
         readTime: "20 min read",
         image: "https://images.unsplash.com/photo-1611974714015-8868615ea411?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "An illustrative graphic of a retirement nest egg with the label Roth IRA, emphasizing tax-free growth for American workers.",
         keywords: ["Roth IRA", "retirement planning", "tax-free investing", "Vanguard", "S&P 500"],
         excerpt: "The Roth IRA is perhaps the greatest [wealth-building tool](/blog/wealth-building-guide-america) available to Americans. Learn how to invest tax-free for the rest of your life.",
         content: `## The Power of Tax-Free Growth
@@ -144,6 +148,7 @@ A Roth IRA is just a folder. You need to put something in it. For 99% of people,
         category: "Credit Cards",
         readTime: "25 min read",
         image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "Premium credit cards spread out on a wooden table next to a passport and a small airplane model, representing US credit card rewards.",
         keywords: ["credit card hacking", "travel rewards", "Chase Sapphire", "Amex Platinum", "points and miles", "credit score"],
         excerpt: "Stop earning 1% cash back. Learn how the world's most successful travelers use US credit cards to fly business class for $5.60.",
         content: `## Introduction to 'Churning' and Points
@@ -174,6 +179,7 @@ You don't need a huge company to get a business credit card. Selling on eBay or 
         category: "Budgeting",
         readTime: "18 min read",
         image: "https://images.unsplash.com/photo-1554224155-169641357599?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "A clean pie chart illustrating the 50-30-20 budgeting rule for personal finance management in the USA.",
         keywords: ["budgeting", "50/30/20 rule", "YNAB", "money management", "automated finance", "zero-based budgeting"],
         excerpt: "The standard 50/30/20 rule is for beginners. Learn the 'Anti-Budget' and 'Zero-Based Budgeting' systems used by the elite.",
         content: `## Why Most Budgets Fail
@@ -202,6 +208,7 @@ Budgeting isn't about saying 'No' to yourself. It's about organizing your money 
         category: "Side Hustles",
         readTime: "30 min read",
         image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "A modern workspace with a laptop showing a rising revenue graph, depicting the growth of an American side hustle.",
         keywords: ["side hustle", "online business", "scaling", "passive income", "US entrepreneurs", "digital marketing", "freelancing"],
         excerpt: "A side hustle should be a bridge to freedom, not just a second job. Learn how to pick, launch, and scale a business in 2025.",
         content: `## The Era of the Solopreneur
@@ -232,6 +239,7 @@ Hear from 3 US-based entrepreneurs who built six-figure businesses while working
         category: "Real Estate",
         readTime: "35 min read",
         image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "A row of modern American suburban houses, illustrating direct real estate investing and house hacking opportunities.",
         keywords: ["real estate", "house hacking", "REITs", "rental property", "property management", "passive income"],
         excerpt: "You don't need a massive down payment to start in real estate. From [House Hacking](/blog/house-hacking-guide-usa) to pure passive REITs, here is your path.",
         content: `## Real Estate: The Great Wealth Accelerator
@@ -260,6 +268,7 @@ We analyze the 'Sun Belt' vs the 'Rust Belt'. Which US cities have the highest r
         category: "Real Estate",
         readTime: "60 min read",
         image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "A blueprint of a duplex building with rental income icons, symbolizing the house hacking strategy in the United States.",
         keywords: ["house hacking 2025", "FHA loan investing", "live for free USA", "real estate wealth", "rental income strategy", "ADU investing", "house hacking math"],
         excerpt: "This is the most comprehensive guide to house hacking ever written for the US market. Learn how to eliminate your housing payment and build a 7-figure real estate portfolio starting with one house.",
         content: `## The Secret to Eliminating Your Biggest Expense

@@ -32,7 +32,7 @@ export default function Blog() {
                                     <div className="relative h-48 w-full overflow-hidden border-b border-brand-border">
                                         <SafeImage
                                             src={post.image}
-                                            alt={post.title}
+                                            alt={post.imageAlt}
                                             className="w-full h-full group-hover:scale-105 transition-transform duration-500"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/80 to-transparent opacity-60 pointer-events-none" />
