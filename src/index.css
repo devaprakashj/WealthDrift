@@ -34,6 +34,7 @@
 .gradient-text-mint {
   background: linear-gradient(135deg, #00d4aa, #00a88a);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -50,4 +51,20 @@
 .btn-mint:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 212, 170, 0.2);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
 }

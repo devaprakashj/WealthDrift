@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, TrendingUp, PiggyBank, CreditCard } from "lucide-react";
+import { ArrowRight, TrendingUp, PiggyBank, CreditCard, ShieldCheck } from "lucide-react";
+import LiveUSMarkets from "../components/util/LiveUSMarkets";
 
 export default function Home() {
     return (
         <div className="flex flex-col gap-10 md:gap-20 pb-20">
+            <LiveUSMarkets />
+
             {/* Hero Section */}
-            <section className="relative min-h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden border-b border-brand-border py-20 md:py-0">
+            <section className="relative min-h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden border-b border-brand-border py-10 md:py-0">
                 <div className="absolute inset-0 bg-gradient-to-b from-brand-mint/5 to-transparent pointer-events-none" />
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
@@ -16,12 +19,17 @@ export default function Home() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="inline-block py-1 px-3 rounded-full bg-brand-mint/10 border border-brand-mint/20 text-brand-mint text-[10px] md:text-xs font-bold uppercase tracking-widest mb-6">
-                            US #1 Financial Guide
-                        </span>
+                        <div className="flex flex-wrap justify-center gap-4 mb-6">
+                            <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-brand-mint/10 border border-brand-mint/20 text-brand-mint text-[10px] md:text-xs font-bold uppercase tracking-widest">
+                                <ShieldCheck className="w-3 h-3" /> US Certified Guide 2026
+                            </span>
+                            <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-blue-400/10 border border-blue-400/20 text-blue-400 text-[10px] md:text-xs font-bold uppercase tracking-widest">
+                                Updated for IRS Codes
+                            </span>
+                        </div>
                         <h1 className="text-3xl sm:text-4xl md:text-7xl font-playfair font-bold text-white leading-tight mb-6 px-2">
-                            Maximize Wealth in the <br className="hidden sm:block" />
-                            <span className="gradient-text-mint">United States Economy</span>
+                            The Blue-Print for <br className="hidden sm:block" />
+                            <span className="gradient-text-mint">America's Financial Elite</span>
                         </h1>
                         <p className="text-brand-text-secondary text-base md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed px-4">
                             Expert-backed strategies to save more, invest smarter, and build
