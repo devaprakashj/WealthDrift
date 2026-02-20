@@ -61,6 +61,42 @@ export default function Home() {
                 </div>
             </div>
 
+            {/* Viral This Week Section - Driving US Session Duration */}
+            <section className="max-w-7xl mx-auto px-4 w-full">
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                    <div>
+                        <span className="text-brand-mint text-[10px] md:text-xs font-bold uppercase tracking-widest mb-2 block">Trending Across America</span>
+                        <h2 className="text-2xl md:text-4xl font-playfair font-bold text-white italic">Viral This Week</h2>
+                    </div>
+                    <Link to="/blog" className="text-brand-text-secondary text-xs uppercase tracking-widest hover:text-brand-mint flex items-center gap-2 group transition-all">
+                        View Editorial Feed <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {[
+                        { slug: "mortgage-refinance-guide-2026", title: "Refinance 101: Lower Your Payment by $400/mo", tag: "Hot Topic" },
+                        { slug: "debt-consolidation-loans-2026", title: "The Debt Trap: How to Consolidate for 0% Interest", tag: "IRS Update" },
+                        { slug: "best-business-credit-cards-startups", title: "Startup Hacks: The $100k Sign-Up Bonus Card", tag: "Founder Choice" },
+                    ].map((item, idx) => (
+                        <Link key={idx} to={`/blog/${item.slug}`} className="glass-card group relative p-6 border-brand-border/20 hover:border-brand-mint/40 transition-all overflow-hidden">
+                            <div className="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+                                <TrendingUp className="w-16 h-16 text-brand-mint" />
+                            </div>
+                            <span className="inline-block py-1 px-3 rounded-lg bg-brand-bg text-[9px] font-bold text-brand-mint uppercase tracking-widest mb-4 border border-brand-mint/20">
+                                {item.tag}
+                            </span>
+                            <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-brand-mint transition-colors mb-4 line-clamp-2 leading-tight">
+                                {item.title}
+                            </h3>
+                            <div className="flex items-center gap-2 text-[10px] text-brand-text-secondary font-bold uppercase tracking-widest">
+                                Read Full Guide <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </section>
+
             {/* Featured Topics */}
             <section className="max-w-7xl mx-auto px-4 w-full">
                 <div className="text-center mb-10 md:mb-16">
