@@ -55,9 +55,29 @@ export default function BlogPost() {
                                 "@type": "ImageObject",
                                 "url": "https://wealthdrift.vercel.app/favicon.svg"
                             }
+                        },
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": window.location.href
                         }
                     })}
                 </script>
+                {post.faqs && (
+                    <script type="application/ld+json">
+                        {JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "FAQPage",
+                            "mainEntity": post.faqs.map(f => ({
+                                "@type": "Question",
+                                "name": f.question,
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": f.answer
+                                }
+                            }))
+                        })}
+                    </script>
+                )}
             </head>
 
             <div className="max-w-7xl mx-auto">
@@ -181,6 +201,27 @@ export default function BlogPost() {
                                 </ReactMarkdown>
                             </div>
 
+                            {/* FAQ Section UI - Highly effective for US Featured Snippets */}
+                            {post.faqs && (
+                                <div className="mb-12" id="faqs">
+                                    <h2 className="text-2xl md:text-3xl font-playfair font-bold text-white mb-8 flex items-center gap-3">
+                                        <Award className="text-brand-mint w-6 h-6" /> Common US Financial Questions
+                                    </h2>
+                                    <div className="space-y-4">
+                                        {post.faqs.map((faq, idx) => (
+                                            <div key={idx} className="glass-card p-6 border border-brand-border/40 hover:border-brand-mint/30 transition-all">
+                                                <h4 className="text-white font-bold mb-3 flex items-start gap-3">
+                                                    <span className="text-brand-mint">Q:</span> {faq.question}
+                                                </h4>
+                                                <p className="text-brand-text-secondary text-sm leading-relaxed pl-7">
+                                                    {faq.answer}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
                             {/* Keywords / Tags */}
                             <div className="flex flex-wrap gap-2 mb-12">
                                 {post.keywords.map((kw) => (
@@ -242,6 +283,13 @@ export default function BlogPost() {
                                         title={post.title}
                                         color="hover:text-[#ff4500] hover:border-[#ff4500]/50"
                                         icon={<svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.056 1.597.04.21.06.423.06.637 0 2.506-3.497 4.545-7.81 4.545s-7.81-2.039-7.81-4.545c0-.218.02-.433.064-.647-.615-.265-1.05-.881-1.05-1.597 0-.968.786-1.754 1.754-1.754.463 0 .875.18 1.179.472 1.187-.813 2.783-1.366 4.553-1.482l.905-4.244 3.282.696c.03.03.835.668 1.513 1.452 1.513zm-9.29 10c-.766 0-1.387.621-1.387 1.387s.621 1.387 1.387 1.387 1.387-.621 1.387-1.387-.621-1.387-1.387-1.387zm6.556 0c-.766 0-1.387.621-1.387 1.387s.621 1.387 1.387 1.387 1.387-.621 1.387-1.387-.621-1.387-1.387-1.387zm-1.879 2.597c-.896 0-1.674.525-2.083 1.293-.053.101-.019.225.077.283a.208.208 0 0 0 .285-.065c.34-.639.99-.982 1.721-.982.724 0 1.38.343 1.724.982a.208.208 0 0 0 .284.065c.097-.058.131-.182.078-.283-.41-.768-1.192-1.293-2.086-1.293z" /></svg>}
+                                    />
+                                    <ShareButton
+                                        platform="Pinterest"
+                                        url={window.location.href}
+                                        title={post.title}
+                                        color="hover:text-[#bd081c] hover:border-[#bd081c]/50"
+                                        icon={<svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.965 1.406-5.965s-.359-.718-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.35c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.259 7.929-7.259 4.164 0 7.398 2.967 7.398 6.931 0 4.135-2.607 7.462-6.225 7.462-1.214 0-2.354-.629-2.746-1.379l-.749 2.848c-.27 1.03-1.001 2.321-1.488 3.113 1.13.35 2.33.541 3.574.541 6.63 0 12.016-5.385 12.016-12.017C24.032 5.367 18.665.029 12.017.029z" /></svg>}
                                     />
                                 </div>
                             </div>
@@ -320,6 +368,7 @@ function ShareButton({ platform, url, title, icon, color = "hover:text-brand-min
     const shareUrls: any = {
         X: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,
         Reddit: `https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
+        Pinterest: `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&description=${encodeURIComponent(title)}`,
     };
 
     return (

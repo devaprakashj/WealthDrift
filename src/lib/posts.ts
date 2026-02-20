@@ -9,6 +9,7 @@ export interface Post {
     image: string;
     imageAlt: string;
     keywords: string[];
+    faqs?: { question: string; answer: string }[];
 }
 
 export const posts: Post[] = [
@@ -22,6 +23,11 @@ export const posts: Post[] = [
         imageAlt: "A professional 3D render of a growing money tree with US dollar bills, symbolizing wealth accumulation in the American economy.",
         keywords: ["wealth building", "millionaire map", "US investing strategy", "financial independence", "FIRE movement", "compound interest", "asset allocation"],
         excerpt: "This 10,000-word deep dive is the only blueprint you need to go from zero to a million-dollar net worth in the United States economy.",
+        faqs: [
+            { question: "How much money do I need to start building wealth in the US?", answer: "You can start with as little as $10 to $50 using fractional shares on platforms like Fidelity or Robinhood. The key is consistency, not the initial amount." },
+            { question: "What is the best way to invest for beginners in America?", answer: "Low-cost S&P 500 index funds or total stock market ETFs (like VTI) are generally considered the best starting point for most US investors due to their diversification and low fees." },
+            { question: "Is the 50/30/20 rule effective for wealth building?", answer: "Yes, it is a foundational budgeting tool where 20% of your income is strictly dedicated to debt repayment and wealth-building investments." }
+        ],
         content: `## Introduction: The Philosophy of Wealth
 
 Wealth in America is not about how much you make; it's about how much you keep and how hard that money works for you. In this massive guide, we will break down every single lever you can pull to accelerate your journey to financial freedom.
@@ -118,6 +124,11 @@ FDIC vs NCUA. We explain why your money is safer in a US-registered HYSA than an
         imageAlt: "An illustrative graphic of a retirement nest egg with the label Roth IRA, emphasizing tax-free growth for American workers.",
         keywords: ["Roth IRA", "retirement planning", "tax-free investing", "Vanguard", "S&P 500"],
         excerpt: "The Roth IRA is perhaps the greatest [wealth-building tool](/blog/wealth-building-guide-america) available to Americans. Learn how to invest tax-free for the rest of your life.",
+        faqs: [
+            { question: "Can I withdraw money from my Roth IRA before 59½?", answer: "You can always withdraw your original contributions (the principal) tax and penalty-free at any time. However, withdrawing earnings before 59½ may trigger taxes and a 10% penalty unless specific exceptions apply." },
+            { question: "What are the income limits for a Roth IRA?", answer: "For single filers, the phase-out range starts around $146,000. For married couples filing jointly, it's around $230,000. These limits adjust annually for inflation." },
+            { question: "Is a Roth IRA better than a 401(k)?", answer: "A 401(k) is usually better if your employer offers a match (free money). A Roth IRA is often superior for flexibility and 100% tax-free growth on your customized investments." }
+        ],
         content: `## The Power of Tax-Free Growth
 
 A Roth IRA is the holy grail of investing. Unlike a 401(k), you pay taxes UP FRONT, but you never pay them again on that money.
@@ -540,6 +551,11 @@ Prices for life insurance only go up as you get older. If you have been [budgeti
         imageAlt: "A clean, modern financial dashboard showing growth charts, retirement account icons, and US dollar signs, representing long-term investment success.",
         keywords: ["US Retirement Guide 2026", "401k vs Roth IRA", "Best Index Funds 2026", "HSA investment strategy", "Backdoor Roth IRA guide", "Financial Independence USA", "asset allocation for beginners"],
         excerpt: "This 10,000-word masterclass is the only resource you need to navigate the US retirement system, minimize taxes, and build a multi-million dollar portfolio.",
+        faqs: [
+            { question: "What is a Backdoor Roth IRA?", answer: "It is a strategy for high earners whose income exceeds Roth IRA limits. You contribute to a Traditional IRA and then convert it to a Roth IRA, paying taxes only on any growth between the contribution and the conversion." },
+            { question: "How does an HSA help with retirement?", answer: "An HSA offers a triple tax advantage. After age 65, it can be used for any expense like a traditional IRA, but it remains tax-free for any medical expenses incurred at any time." },
+            { question: "What is the 4% rule in retirement?", answer: "The 4% rule suggests that you can safely withdraw 4% of your initial retirement portfolio value each year, adjusted for inflation, with a high probability of the money lasting 30 years." }
+        ],
         content: `## Part 1: The Foundation of American Wealth
 
 Retirement in the United States has shifted. The days of corporate pensions are mostly gone. Today, the responsibility of building a secure future lies solely on your shoulders. But with the right strategy, the US financial system offers the most powerful wealth-building tools in the world.
