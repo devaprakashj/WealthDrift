@@ -21,7 +21,7 @@ export default function Home() {
                     >
                         <div className="flex flex-wrap justify-center gap-4 mb-6">
                             <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-brand-mint/10 border border-brand-mint/20 text-brand-mint text-[10px] md:text-xs font-bold uppercase tracking-widest">
-                                <ShieldCheck className="w-3 h-3" /> US Certified Guide 2026
+                                <ShieldCheck className="w-3 h-3" /> US Certified Guide • Audited Feb 20, 2026
                             </span>
                             <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-blue-400/10 border border-blue-400/20 text-blue-400 text-[10px] md:text-xs font-bold uppercase tracking-widest">
                                 Updated for IRS Codes

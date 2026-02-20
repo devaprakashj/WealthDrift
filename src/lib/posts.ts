@@ -585,7 +585,7 @@ A Roth IRA is a tax-advantaged individual retirement account. It is often called
 In 2026, the contribution limits have adjusted for inflation. We break down the income phase-outs and how to navigate them. If you earn too much, you must use the **Backdoor Roth IRA** strategy.
 
 ### 3.2 The Backdoor Roth IRA (Calculated Move)
-This is for high earners. You contribute to a Traditional IRA (non-deductible) and immediately convert it to a Roth IRA. *Crucial for doctors, engineers, and tech professionals.*
+This is for high earners. You contribute to a Traditional IRA (non-deductible) and immediately convert it to a Roth IRA. *Crucial for doctors, engineers, and tech professionals.* You can verify current conversion rules at the [IRS Official Site](https://www.irs.gov/retirement-plans/roth-iras).
 
 ---
 
@@ -596,7 +596,7 @@ The HSA is the most tax-advantaged account in the US tax code. It offers a "Trip
 2.  **Tax-Free Growth** (Invest your HSA funds in the stock market).
 3.  **Tax-Free Withdrawals** (For qualified medical expenses).
 
-*Expert Tip: Don't spend your HSA funds on small doctor bills. Pay out of pocket, keep the receipts, and let the HSA grow for 30 years.*
+*Expert Tip: Don't spend your HSA funds on small doctor bills. For official 2026 limits, refer to [IRS Publication 969](https://www.irs.gov/publications/p969). Pay out of pocket, keep the receipts, and let the HSA grow for 30 years.*
 
 ---
 
