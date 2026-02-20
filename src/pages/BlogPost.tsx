@@ -25,7 +25,7 @@ export default function BlogPost() {
     }
 
     return (
-        <div className="min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen py-10 px-4 sm:px-6 lg:px-8 scroll-smooth">
             <ReadingProgress />
             {/* Dynamic SEO Tags for individual posts */}
             <head>
@@ -156,24 +156,18 @@ export default function BlogPost() {
 
                             {/* Table of Contents - Crucial for US SEO */}
                             <div className="glass-card p-6 mb-12 border-l-4 border-l-brand-mint bg-brand-mint/5 overflow-x-hidden">
-                                <h3 className="text-lg font-playfair font-bold text-white mb-4 italic">What's Inside This Guide:</h3>
+                                <h3 className="text-lg font-playfair font-bold text-white mb-4 italic">Jump to Strategy:</h3>
                                 <ul className="space-y-3 text-sm text-brand-text-secondary">
-                                    <li className="flex items-start gap-2 hover:text-brand-mint transition-colors">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-brand-mint mt-1.5 shrink-0" />
-                                        <a href="#introduction">Executive Summary & Introduction</a>
-                                    </li>
-                                    <li className="flex items-start gap-2 hover:text-brand-mint transition-colors">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-brand-mint mt-1.5 shrink-0" />
-                                        <a href="#core-strategies">Core Financial Strategies</a>
-                                    </li>
-                                    <li className="flex items-start gap-2 hover:text-brand-mint transition-colors">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-brand-mint mt-1.5 shrink-0" />
-                                        <a href="#implementation">Step-by-Step Implementation</a>
-                                    </li>
-                                    <li className="flex items-start gap-2 hover:text-brand-mint transition-colors">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-brand-mint mt-1.5 shrink-0" />
-                                        <a href="#faqs">Frequently Asked Questions</a>
-                                    </li>
+                                    {post.content.match(/^##\s+.+$/gm)?.map((header, idx) => {
+                                        const title = header.replace(/^##\s+/, "");
+                                        const id = title.toLowerCase().replace(/\s+/g, '-');
+                                        return (
+                                            <li key={idx} className="flex items-start gap-2 hover:text-brand-mint transition-colors">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-brand-mint mt-1.5 shrink-0" />
+                                                <a href={`#${id}`}>{title}</a>
+                                            </li>
+                                        );
+                                    })}
                                 </ul>
                             </div>
 
@@ -188,8 +182,14 @@ export default function BlogPost() {
                                             }
                                             return <a target="_blank" rel="noopener noreferrer" className="text-brand-mint hover:underline font-bold" {...props} />;
                                         },
-                                        h2: ({ node, ...props }) => <h2 className="text-2xl md:text-3xl font-playfair font-bold text-white mt-12 mb-6 border-l-4 border-brand-mint pl-4" {...props} />,
-                                        h3: ({ node, ...props }) => <h3 className="text-xl md:text-2xl font-playfair font-bold text-white mt-10 mb-4" {...props} />,
+                                        h2: ({ node, ...props }) => {
+                                            const id = props.children?.toString().toLowerCase().replace(/\s+/g, '-');
+                                            return <h2 id={id} className="text-2xl md:text-3xl font-playfair font-bold text-white mt-12 mb-6 border-l-4 border-brand-mint pl-4" {...props} />;
+                                        },
+                                        h3: ({ node, ...props }) => {
+                                            const id = props.children?.toString().toLowerCase().replace(/\s+/g, '-');
+                                            return <h3 id={id} className="text-xl md:text-2xl font-playfair font-bold text-white mt-10 mb-4" {...props} />;
+                                        },
                                         h4: ({ node, ...props }) => <h4 className="text-lg md:text-xl font-bold text-white mt-8 mb-3" {...props} />,
                                         p: ({ node, ...props }) => <p className="mb-6 last:mb-0" {...props} />,
                                         ul: ({ node, ...props }) => <ul className="list-disc pl-6 mb-8 space-y-2" {...props} />,
