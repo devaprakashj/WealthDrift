@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Clock, Calendar, User, Award, ArrowRight } from "lucide-react";
@@ -12,6 +12,23 @@ import remarkGfm from "remark-gfm";
 export default function BlogPost() {
     const { slug } = useParams();
     const post = posts.find((p) => p.slug === slug);
+
+    useEffect(() => {
+        if (post) {
+            document.title = `${post.title} | WealthDrift`;
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) {
+                metaDesc.setAttribute("content", post.excerpt);
+            }
+            // Update OG tags
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle) ogTitle.setAttribute("content", post.title);
+            const ogDesc = document.querySelector('meta[property="og:description"]');
+            if (ogDesc) ogDesc.setAttribute("content", post.excerpt);
+            const ogImg = document.querySelector('meta[property="og:image"]');
+            if (ogImg) ogImg.setAttribute("content", post.image);
+        }
+    }, [post]);
 
     if (!post) {
         return (
