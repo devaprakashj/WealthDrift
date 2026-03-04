@@ -75,9 +75,9 @@ export default function Home() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {[
-                        { slug: "wealth-building-guide-america", title: "The Ultimate Guide: Zero to $1M Net Worth", tag: "Editor Choice" },
-                        { slug: "us-tax-brackets-explained", title: "IRS Update: How to Lower Your Taxable Income", tag: "Tax Season" },
-                        { slug: "best-hysa-rates", title: "7 High-Yield Accounts Beating Inflation Right Now", tag: "Saver Choice" },
+                        { slug: "agentic-ai-banking-2026", title: "Agentic AI: Your New 2026 Digital Co-worker", tag: "2026 Trend" },
+                        { slug: "house-hacking-2026-regulations", title: "House Hacking: Live for Free with 2026 Rules", tag: "Real Estate" },
+                        { slug: "deepfake-fraud-defense-2026", title: "Deepfake Defense: Shielding Your Wealth from AI", tag: "Cybersecurity" },
                     ].map((item, idx) => (
                         <Link key={idx} to={`/blog/${item.slug}`} className="glass-card group relative p-6 border-brand-border/20 hover:border-brand-mint/40 transition-all overflow-hidden">
                             <div className="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
