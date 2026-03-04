@@ -115,16 +115,16 @@ export default function Tools() {
 
                 <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
                     {[
-                        { title: "Net Worth Tracker", icon: TrendingUp, desc: "See where you stand globally." },
-                        { title: "Roth IRA Calculator", icon: Calculator, desc: "Predict your tax-free retirement." },
-                        { title: "Credit Payoff", icon: CreditCard, desc: "Fast-track your way out of debt." },
+                        { title: "Net Worth Tracker", icon: TrendingUp, desc: "See where you stand globally compared to US averages." },
+                        { title: "Roth IRA Calculator", icon: Calculator, desc: "Predict your tax-free retirement growth in seconds." },
+                        { title: "Credit Payoff", icon: CreditCard, desc: "Fast-track your way out of high-interest US debt." },
                     ].map((tool) => (
-                        <div key={tool.title} className="glass-card p-8 hover:border-brand-mint/30 transition-all opacity-70 group">
+                        <div key={tool.title} className="glass-card p-8 hover:border-brand-mint/30 transition-all group">
                             <div className="p-3 rounded-xl bg-white/5 w-fit mb-6 group-hover:bg-brand-mint/10 transition-colors">
                                 <tool.icon className="w-6 h-6 text-white group-hover:text-brand-mint" />
                             </div>
                             <h3 className="text-white font-bold mb-2">{tool.title}</h3>
-                            <p className="text-brand-text-secondary text-xs">{tool.desc} (Coming in V2)</p>
+                            <p className="text-brand-text-secondary text-xs">{tool.desc}</p>
                         </div>
                     ))}
                 </div>

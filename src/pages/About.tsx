@@ -70,12 +70,12 @@ export default function About() {
                             <div className="flex flex-wrap gap-6 items-center">
                                 <div className="flex gap-4">
                                     <div className="glass-card px-4 py-2 border-brand-border bg-white/5">
-                                        <p className="text-brand-mint font-bold">100+</p>
-                                        <p className="text-[10px] text-brand-text-secondary uppercase">Articles Written</p>
+                                        <p className="text-brand-mint font-bold">30+</p>
+                                        <p className="text-[10px] text-brand-text-secondary uppercase">Expert Guides</p>
                                     </div>
                                     <div className="glass-card px-4 py-2 border-brand-border bg-white/5">
-                                        <p className="text-brand-mint font-bold">50k</p>
-                                        <p className="text-[10px] text-brand-text-secondary uppercase">Monthly Impact</p>
+                                        <p className="text-brand-mint font-bold">50</p>
+                                        <p className="text-[10px] text-brand-text-secondary uppercase">States Covered</p>
                                     </div>
                                 </div>
                                 <a

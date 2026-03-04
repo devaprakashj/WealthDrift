@@ -47,16 +47,16 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Trust Bar - Crucial for USA Organic Authority */}
+            {/* Data Source Bar - Crucial for E-E-A-T */}
             <div className="max-w-7xl mx-auto px-4 w-full -mt-6 md:-mt-10">
                 <div className="glass-card py-6 md:py-10 border-brand-border/20 bg-brand-card/30 backdrop-blur-xl">
-                    <p className="text-[8px] md:text-[10px] text-brand-text-secondary text-center uppercase tracking-[0.2em] md:tracking-[0.4em] mb-6 md:mb-10 font-bold">Featured In & Trusted By Experts At</p>
-                    <div className="flex flex-wrap justify-center items-center gap-x-8 md:gap-x-16 gap-y-6 md:gap-y-10 opacity-30 grayscale hover:grayscale-0 transition-all duration-700 px-6">
-                        <span className="text-white font-serif text-lg md:text-2xl tracking-tighter">MarketWatch</span>
-                        <span className="text-white font-serif text-lg md:text-2xl tracking-tighter italic">YAHOO!</span>
-                        <span className="text-white font-serif text-lg md:text-2xl tracking-tighter">INSIDER</span>
-                        <span className="text-white font-serif text-lg md:text-2xl tracking-tighter">Forbes</span>
-                        <span className="text-white font-serif text-lg md:text-2xl tracking-tighter">WSJ</span>
+                    <p className="text-[8px] md:text-[10px] text-brand-text-secondary text-center uppercase tracking-[0.2em] md:tracking-[0.4em] mb-6 md:mb-10 font-bold">Guiding Principles Built with Data From</p>
+                    <div className="flex flex-wrap justify-center items-center gap-x-8 md:gap-x-16 gap-y-6 md:gap-y-10 opacity-40 grayscale px-6">
+                        <span className="text-white font-bold text-lg md:text-2xl tracking-tighter">IRS.gov</span>
+                        <span className="text-white font-bold text-lg md:text-2xl tracking-tighter">FDIC</span>
+                        <span className="text-white font-bold text-lg md:text-2xl tracking-tighter">BLS</span>
+                        <span className="text-white font-bold text-lg md:text-2xl tracking-tighter">SSA.gov</span>
+                        <span className="text-white font-bold text-lg md:text-2xl tracking-tighter">Healthcare.gov</span>
                     </div>
                 </div>
             </div>
@@ -75,9 +75,9 @@ export default function Home() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {[
-                        { slug: "mortgage-refinance-guide-2026", title: "Refinance 101: Lower Your Payment by $400/mo", tag: "Hot Topic" },
-                        { slug: "debt-consolidation-loans-2026", title: "The Debt Trap: How to Consolidate for 0% Interest", tag: "IRS Update" },
-                        { slug: "best-business-credit-cards-startups", title: "Startup Hacks: The $100k Sign-Up Bonus Card", tag: "Founder Choice" },
+                        { slug: "wealth-building-guide-america", title: "The Ultimate Guide: Zero to $1M Net Worth", tag: "Editor Choice" },
+                        { slug: "us-tax-brackets-explained", title: "IRS Update: How to Lower Your Taxable Income", tag: "Tax Season" },
+                        { slug: "best-hysa-rates", title: "7 High-Yield Accounts Beating Inflation Right Now", tag: "Saver Choice" },
                     ].map((item, idx) => (
                         <Link key={idx} to={`/blog/${item.slug}`} className="glass-card group relative p-6 border-brand-border/20 hover:border-brand-mint/40 transition-all overflow-hidden">
                             <div className="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -130,7 +130,7 @@ export default function Home() {
                         <h2 className="text-2xl md:text-5xl font-playfair font-bold text-white mb-6">Join the WealthDrift Newsletter</h2>
                         <p className="text-brand-text-secondary text-base md:text-lg mb-8 md:text-lg">
                             Get weekly deep-dives into US investing, tax strategies, and credit hacks.
-                            Join 5,000+ Americans building generational wealth.
+                            Join Americans building generational wealth.
                         </p>
 
                         <NewsletterForm />
