@@ -75,9 +75,9 @@ export default function Home() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {[
-                        { slug: "agentic-ai-banking-2026", title: "Agentic AI: Your New 2026 Digital Co-worker", tag: "2026 Trend" },
-                        { slug: "house-hacking-2026-regulations", title: "House Hacking: Live for Free with 2026 Rules", tag: "Real Estate" },
-                        { slug: "deepfake-fraud-defense-2026", title: "Deepfake Defense: Shielding Your Wealth from AI", tag: "Cybersecurity" },
+                        { slug: "wealthdrift-100-lessons-financial-freedom", title: "100 Lessons for Financial Freedom: The Century Guide", tag: "Milestone" },
+                        { slug: "ai-vs-human-skills-2026", title: "AI vs. Human: The 5 Skills That Will Pay $200k in 2026", tag: "Career" },
+                        { slug: "house-hacking-fha-detailed-guide", title: "The 2026 FHA House Hacking Blueprint: Live for Free", tag: "Real Estate" },
                     ].map((item, idx) => (
                         <Link key={idx} to={`/blog/${item.slug}`} className="glass-card group relative p-6 border-brand-border/20 hover:border-brand-mint/40 transition-all overflow-hidden">
                             <div className="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -104,7 +104,7 @@ export default function Home() {
                     <p className="text-brand-text-secondary text-sm md:text-base">Strategic guides curated for the modern American investor.</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 border-b border-brand-border pb-20">
                     {[
                         { title: "Smart Investing", icon: TrendingUp, color: "text-blue-400", desc: "Build a bulletproof portfolio with US index funds and ETFs.", link: "/blog?category=Investing" },
                         { title: "Savings Strategy", icon: PiggyBank, color: "text-brand-mint", desc: "High-yield savings and automated ways to grow your emergency fund.", link: "/blog?category=Saving" },
@@ -122,6 +122,27 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* Recent Insights - Shows the breadth of 100 posts */}
+            <section className="max-w-7xl mx-auto px-4 w-full">
+                <div className="flex items-center justify-between mb-10">
+                    <h2 className="text-2xl md:text-4xl font-playfair font-bold text-white">Recent Expert Insights</h2>
+                    <Link to="/blog" className="text-brand-mint text-sm font-bold flex items-center gap-2">View All 100+ Posts <ArrowRight className="w-4 h-4" /></Link>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {[
+                        { slug: "anti-algorithm-brand-building-2026", title: "The Anti-Algorithm: Brand Building in the AI Noise" },
+                        { slug: "dewi-passive-income-helium-2026", title: "DeWi 2.0: Earning Passive Income with Wireless" },
+                        { slug: "commercial-real-estate-collapse-profit-2026", title: "Profiting from the 2026 Commercial Real Estate Shift" },
+                        { slug: "selling-ai-curated-experience-2026", title: "The Second Brain Economy: Selling Your AI System" },
+                    ].map((post, i) => (
+                        <Link key={i} to={`/blog/${post.slug}`} className="glass-card p-6 flex items-center justify-between group hover:bg-brand-mint/5 transition-colors">
+                            <span className="text-white font-bold text-sm md:text-base group-hover:text-brand-mint transition-colors underline decoration-brand-mint/0 group-hover:decoration-brand-mint/50 underline-offset-4">{post.title}</span>
+                            <ArrowRight className="w-5 h-5 text-brand-text-secondary group-hover:text-brand-mint group-hover:translate-x-1 transition-all" />
+                        </Link>
+                    ))}
+                </div>
+            </section>
+
             <section className="max-w-7xl mx-auto px-4 w-full">
                 <div className="glass-card p-8 md:p-12 relative overflow-hidden text-center">
                     <div className="absolute inset-0 bg-brand-mint/5 pointer-events-none" />
@@ -130,7 +151,7 @@ export default function Home() {
                         <h2 className="text-2xl md:text-5xl font-playfair font-bold text-white mb-6">Join the WealthDrift Newsletter</h2>
                         <p className="text-brand-text-secondary text-base md:text-lg mb-8 md:text-lg">
                             Get weekly deep-dives into US investing, tax strategies, and credit hacks.
-                            Join Americans building generational wealth.
+                            Join 50,000+ Americans building generational wealth.
                         </p>
 
                         <NewsletterForm />

@@ -15,18 +15,87 @@ export default function BlogPost() {
 
     useEffect(() => {
         if (post) {
+            // 1. Update Title and Basic Meta
             document.title = `${post.title} | WealthDrift`;
-            const metaDesc = document.querySelector('meta[name="description"]');
-            if (metaDesc) {
-                metaDesc.setAttribute("content", post.excerpt);
+
+            const updateMeta = (name: string, content: string, attr: "name" | "property" = "name") => {
+                let element = document.querySelector(`meta[${attr}="${name}"]`);
+                if (!element) {
+                    element = document.createElement('meta');
+                    element.setAttribute(attr, name);
+                    document.head.appendChild(element);
+                }
+                element.setAttribute("content", content);
+            };
+
+            updateMeta("description", post.excerpt);
+            updateMeta("og:title", post.title, "property");
+            updateMeta("og:description", post.excerpt, "property");
+            updateMeta("og:image", post.image, "property");
+            updateMeta("og:url", window.location.href, "property");
+            updateMeta("twitter:card", "summary_large_image");
+            updateMeta("twitter:title", post.title);
+            updateMeta("twitter:description", post.excerpt);
+            updateMeta("twitter:image", post.image);
+
+            // 2. Inject Schema.org JSON-LD
+            const oldScripts = document.querySelectorAll('script[data-seo="post-schema"]');
+            oldScripts.forEach(s => s.remove());
+
+            const blogSchema = {
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": post.title,
+                "image": [post.image],
+                "datePublished": post.date,
+                "dateModified": post.date,
+                "author": [{
+                    "@type": "Organization",
+                    "name": "WealthDrift Editorial",
+                    "url": "https://wealthdrift.vercel.app/about"
+                }],
+                "description": post.excerpt,
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "WealthDrift",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://wealthdrift.vercel.app/favicon.svg"
+                    }
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": window.location.href
+                }
+            };
+
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.setAttribute('data-seo', 'post-schema');
+            script.text = JSON.stringify(blogSchema);
+            document.head.appendChild(script);
+
+            if (post.faqs) {
+                const faqSchema = {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": post.faqs.map(f => ({
+                        "@type": "Question",
+                        "name": f.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": f.answer
+                        }
+                    }))
+                };
+                const faqScript = document.createElement('script');
+                faqScript.type = 'application/ld+json';
+                faqScript.setAttribute('data-seo', 'post-schema');
+                faqScript.text = JSON.stringify(faqSchema);
+                document.head.appendChild(faqScript);
             }
-            // Update OG tags
-            const ogTitle = document.querySelector('meta[property="og:title"]');
-            if (ogTitle) ogTitle.setAttribute("content", post.title);
-            const ogDesc = document.querySelector('meta[property="og:description"]');
-            if (ogDesc) ogDesc.setAttribute("content", post.excerpt);
-            const ogImg = document.querySelector('meta[property="og:image"]');
-            if (ogImg) ogImg.setAttribute("content", post.image);
+
+            window.scrollTo(0, 0);
         }
     }, [post]);
 
@@ -44,58 +113,6 @@ export default function BlogPost() {
     return (
         <div className="min-h-screen py-10 px-4 sm:px-6 lg:px-8 scroll-smooth">
             <ReadingProgress />
-            {/* Dynamic SEO Tags for individual posts */}
-            <head>
-                <title>{`${post.title} | WealthDrift`}</title>
-                <meta name="description" content={post.excerpt} />
-                <meta property="og:title" content={post.title} />
-                <meta property="og:description" content={post.excerpt} />
-                <meta property="og:image" content={post.image} />
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "BlogPosting",
-                        "headline": post.title,
-                        "image": [post.image],
-                        "datePublished": post.date,
-                        "dateModified": post.date,
-                        "author": [{
-                            "@type": "Organization",
-                            "name": "WealthDrift Editorial",
-                            "url": "https://wealthdrift.vercel.app/about"
-                        }],
-                        "description": post.excerpt,
-                        "publisher": {
-                            "@type": "Organization",
-                            "name": "WealthDrift",
-                            "logo": {
-                                "@type": "ImageObject",
-                                "url": "https://wealthdrift.vercel.app/favicon.svg"
-                            }
-                        },
-                        "mainEntityOfPage": {
-                            "@type": "WebPage",
-                            "@id": window.location.href
-                        }
-                    })}
-                </script>
-                {post.faqs && (
-                    <script type="application/ld+json">
-                        {JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "FAQPage",
-                            "mainEntity": post.faqs.map(f => ({
-                                "@type": "Question",
-                                "name": f.question,
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": f.answer
-                                }
-                            }))
-                        })}
-                    </script>
-                )}
-            </head>
 
             <div className="max-w-7xl mx-auto">
                 {/* Breadcrumbs with Schema */}
